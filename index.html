@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Thai GL Series</title>
+
+
+  <style>
+
+
+    /* =========================
+       ESTILOS GENERALES
+    ========================= */
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background-color: #dff3ff;
+      color: #17324d;
+    }
+
+
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+
+    header {
+      height: 105px;
+      background-color: #ffffff;
+
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+
+      padding: 10px 25px;
+
+
+      border-bottom: 1px solid #d5d5d5;
+    }
+
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      color: #17324d;
+    }
+
+
+    nav {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+
+    nav a {
+      text-decoration: none;
+
+
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+
+
+      background-color: #eeeeff;
+
+
+      color: #304a9b;
+
+
+      padding: 5px 9px;
+
+
+      border-radius: 2px;
+    }
+
+
+    nav a:first-child {
+      background-color: #008c95;
+      color: white;
+    }
+
+
+    nav a:hover {
+      background-color: #008c95;
+      color: white;
+    }
+
+
+
+
+    /* =========================
+       IMAGEN HEADER
+    ========================= */
+
+
+    .header-img {
+      width: 105px;
+      height: 95px;
+      object-fit: contain;
+    }
+
+
+
+
+    /* =========================
+       ESTRUCTURA
+    ========================= */
+
+
+    .contenedor {
+      display: grid;
+
+
+      grid-template-columns: 260px 1fr;
+
+
+      min-height: calc(100vh - 105px);
+    }
+
+
+
+
+    /* =========================
+       ASIDE
+    ========================= */
+
+
+    aside {
+      background-color: #eeeeee;
+
+
+      min-height: 100%;
+
+
+      text-align: center;
+
+
+      border-right: 8px solid #ffffff;
+    }
+
+
+
+
+    /* =========================
+       PUBLICIDAD SPOTIFY
+    ========================= */
+
+
+    .publicidad-spotify {
+      display: block;
+
+
+      height: 100%;
+
+
+      padding-bottom: 30px;
+
+
+      text-decoration: none;
+
+
+      color: inherit;
+
+
+      cursor: pointer;
+
+
+      transition: 0.3s;
+    }
+
+
+    .publicidad-spotify:hover {
+      background-color: #e2e2e2;
+    }
+
+
+
+
+    .aside-titulo {
+      padding: 20px 10px 10px;
+    }
+
+
+    .aside-titulo h3 {
+      color: #1db954;
+
+
+      font-family: Georgia, serif;
+
+
+      font-size: 15px;
+
+
+      margin-bottom: 10px;
+    }
+
+
+    .aside-titulo p {
+      font-family: Georgia, serif;
+
+
+      font-size: 22px;
+
+
+      font-weight: bold;
+
+
+      color: #191414;
+    }
+
+
+
+
+    /* LOGO SPOTIFY */
+
+
+    .spotify-logo {
+      width: 140px;
+      height: 140px;
+
+
+      margin: 20px auto;
+
+
+      display: flex;
+
+
+      justify-content: center;
+
+
+      align-items: center;
+
+
+      background-color: #1db954;
+
+
+      border-radius: 50%;
+
+
+      color: white;
+
+
+      font-family: Arial, sans-serif;
+
+
+      font-size: 70px;
+
+
+      font-weight: bold;
+
+
+      box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+
+
+
+    /* TEXTO */
+
+
+    .aside-info {
+      padding: 20px;
+
+
+      font-family: Arial, sans-serif;
+
+
+      font-size: 14px;
+
+
+      line-height: 1.6;
+
+
+      color: #333;
+    }
+
+
+
+
+    /* BOTÓN SPOTIFY */
+
+
+    .ir-app {
+      display: inline-block;
+
+
+      background-color: #1db954;
+
+
+      color: white;
+
+
+      padding: 9px 18px;
+
+
+      border-radius: 20px;
+
+
+      font-weight: bold;
+
+
+      margin-top: 10px;
+
+
+      transition: 0.3s;
+    }
+
+
+    .publicidad-spotify:hover .ir-app {
+      background-color: #169c46;
+    }
+
+
+
+
+    /* =========================
+       MAIN
+    ========================= */
+
+
+    main {
+      background-color: #dff3ff;
+
+
+      padding: 45px 30px;
+    }
+
+
+
+
+    /* =========================
+       ARTICLE
+    ========================= */
+
+
+    article {
+      background-color: white;
+
+
+      max-width: 900px;
+
+
+      margin: 0 auto;
+
+
+      padding: 18px 55px 35px;
+
+
+      border-radius: 7px;
+
+
+      box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.12);
+    }
+
+
+
+
+    /* =========================
+       TÍTULO
+    ========================= */
+
+
+    .titulo {
+      text-align: center;
+
+
+      margin-bottom: 25px;
+    }
+
+
+    .titulo h1 {
+      color: #4892bd;
+
+
+      font-size: 27px;
+
+
+      margin-bottom: 8px;
+    }
+
+
+    .titulo p {
+      color: #cb5c5c;
+
+
+      font-family: Arial, sans-serif;
+
+
+      font-size: 14px;
+    }
+
+
+
+
+    /* =========================
+       INTRODUCCIÓN
+    ========================= */
+
+
+    .publicidad {
+      background-color: #69b4ff;
+
+
+      border-left: 4px solid #008c95;
+
+
+      padding: 15px;
+
+
+      margin-bottom: 25px;
+
+
+      font-family: Arial, sans-serif;
+
+
+      line-height: 1.6;
+
+
+      color: #444;
+    }
+
+
+    .publicidad h2 {
+      color: #008c95;
+
+
+      font-size: 18px;
+
+
+      margin-bottom: 8px;
+    }
+
+
+
+
+    /* =========================
+       BOTONES
+    ========================= */
+
+
+    .filter-buttons {
+      display: flex;
+
+
+      justify-content: center;
+
+
+      gap: 8px;
+
+
+      flex-wrap: wrap;
+
+
+      margin-bottom: 25px;
+    }
+
+
+    .btn {
+      background-color: #9d9dcd;
+
+
+      color: #304a9b;
+
+
+      border: 1px solid #c9c9df;
+
+
+      padding: 7px 14px;
+
+
+      border-radius: 3px;
+
+
+      cursor: pointer;
+
+
+      font-family: Arial, sans-serif;
+
+
+      font-size: 12px;
+    }
+
+
+    .btn:hover {
+      background-color: #dcecff;
+    }
+
+
+    .btn.active {
+      background-color: #008c95;
+
+
+      color: rgb(255, 176, 176);
+
+
+      border-color: #008c95;
+    }
+
+
+
+
+    /* =========================
+       GALERÍA
+    ========================= */
+
+
+    .gallery {
+      display: grid;
+
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+
+      gap: 20px;
+    }
+
+
+
+
+    /* =========================
+       TARJETAS
+    ========================= */
+
+
+    .card {
+      background-color: #ffffff;
+
+
+      border: 1px solid #d9d9d9;
+
+
+      border-radius: 5px;
+
+
+      overflow: hidden;
+
+
+      box-shadow:
+        0 1px 5px rgba(0, 0, 0, 0.08);
+
+
+      transition: 0.3s;
+    }
+
+
+    .card:hover {
+      transform: translateY(-4px);
+
+
+      box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.15);
+    }
+
+
+    .card img {
+      width: 100%;
+
+
+      height: 250px;
+
+
+      object-fit: cover;
+    }
+
+
+    .card-info {
+      padding: 15px;
+
+
+      text-align: center;
+    }
+
+
+    .card-title {
+      color: #13547a;
+
+
+      font-size: 18px;
+
+
+      font-weight: bold;
+
+
+      margin-bottom: 8px;
+    }
+
+
+    .card-tag {
+      display: inline-block;
+
+
+      background-color: #eeeeff;
+
+
+      color: #304a9b;
+
+
+      padding: 4px 8px;
+
+
+      border-radius: 3px;
+
+
+      font-family: Arial, sans-serif;
+
+
+      font-size: 10px;
+    }
+
+
+
+
+    /* =========================
+       OCULTAR TARJETAS
+    ========================= */
+
+
+    .hide {
+      display: none;
+    }
+
+
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+
+    footer {
+      background-color: #ffffff;
+
+
+      color: #555;
+
+
+      text-align: center;
+
+
+      padding: 18px;
+
+
+      border-top: 1px solid #d5d5d5;
+
+
+      font-family: Arial, sans-serif;
+
+
+      font-size: 12px;
+    }
+
+
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+
+    @media (max-width: 800px) {
+
+
+      .contenedor {
+        grid-template-columns: 1fr;
+      }
+
+
+      aside {
+        border-right: none;
+
+
+        border-bottom: 5px solid white;
+      }
+
+
+      article {
+        padding: 20px;
+      }
+
+
+    }
+
+
+
+
+    @media (max-width: 600px) {
+
+
+      header {
+        height: auto;
+
+
+        flex-direction: column;
+
+
+        gap: 10px;
+
+
+        padding: 15px;
+      }
+
+
+      .header-img {
+        display: none;
+      }
+
+
+      main {
+        padding: 20px 10px;
+      }
+
+
+      .titulo h1 {
+        font-size: 23px;
+      }
+
+
+    }
+
+
+  </style>
+
+
+</head>
+
+
+
+
+<body>
+
+
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+
+  <header>
+
+
+    <div>
+
+
+      <div class="logo">
+        Thai GL Series
+      </div>
+
+
+      <nav>
+
+
+        <a href="#">
+          Inicio
+        </a>
+
+
+        <a href="#series">
+          Series
+        </a>
+
+
+        <a href="#contacto">
+          Contacto
+        </a>
+
+
+      </nav>
+
+
+    </div>
+
+
+
+
+    <div class="header-img">
+      🌸
+    </div>
+
+
+  </header>
+
+
+
+
+  <!-- =========================
+       CONTENEDOR PRINCIPAL
+  ========================= -->
+
+
+  <div class="contenedor">
+
+
+
+
+    <!-- =========================
+         ASIDE
+    ========================= -->
+
+
+    <aside>
+
+
+      <a
+        href="https://open.spotify.com/"
+        target="_blank"
+        class="publicidad-spotify"
+      >
+
+
+        <div class="aside-titulo">
+
+
+          <h3>
+            🎵 Escucha música 🎵
+          </h3>
+
+
+          <p>
+            Spotify
+          </p>
+
+
+        </div>
+
+
+
+
+        <div class="spotify-logo">
+          ▶
+        </div>
+
+
+
+
+        <div class="aside-info">
+
+
+          <strong>
+            Descubre nueva música
+          </strong>
+
+
+          <br><br>
+
+
+          Escucha tus canciones favoritas,
+          crea playlists y descubre nuevos
+          artistas en Spotify.
+
+
+          <br><br>
+
+
+          <span class="ir-app">
+            🎧 Abrir Spotify
+          </span>
+
+
+        </div>
+
+
+      </a>
+
+
+    </aside>
+
+
+
+
+    <!-- =========================
+         MAIN
+    ========================= -->
+
+
+    <main id="series">
+
+
+
+
+      <!-- =========================
+           ARTICLE
+      ========================= -->
+
+
+      <article>
+
+
+
+
+        <section class="titulo">
+
+
+          <h1>
+            Series GL Tailandesas
+          </h1>
+
+
+          <p>
+            Descubre tus series Girls' Love favoritas
+          </p>
+
+
+        </section>
+
+
+
+
+        <section class="publicidad">
+
+
+          <h2>
+            ✨ Mundo GL Tailandés ✨
+          </h2>
+
+
+          <p>
+            Conoce historias de amor, amistad y nuevos
+            comienzos a través de algunas de las series
+            GL más conocidas de Tailandia, como
+            GAP: The Series, 23.5 y 4 Elements.
+          </p>
+
+
+        </section>
+
+
+
+
+        <!-- FILTROS -->
+
+
+        <div class="filter-buttons">
+
+
+          <button
+            class="btn active"
+            onclick="filterSeries('todas', this)">
+
+
+            Todas
+
+
+          </button>
+
+
+
+
+          <button
+            class="btn"
+            onclick="filterSeries('four-elements', this)">
+
+
+            4 Elements
+
+
+          </button>
+
+
+
+
+          <button
+            class="btn"
+            onclick="filterSeries('otras', this)">
+
+
+            Otras GL
+
+
+          </button>
+
+
+        </div>
+
+
+
+
+        <!-- =========================
+             SERIES
+        ========================= -->
+
+
+        <section class="gallery">
+
+
+
+
+          <!-- GAP -->
+
+
+          <div class="card otras">
+
+
+            <img
+              src="imagenes/gap.webp"
+              alt="GAP The Series">
+
+
+            <div class="card-info">
+
+
+              <div class="card-title">
+                GAP: The Series
+              </div>
+
+
+              <span class="card-tag">
+                GL Tailandesa
+              </span>
+
+
+            </div>
+
+
+          </div>
+
+
+
+
+          <!-- 23.5 -->
+
+
+          <div class="card otras">
+
+
+            <img
+              src="imagenes/23.5.jpg"
+              alt="23.5">
+
+
+            <div class="card-info">
+
+
+              <div class="card-title">
+                23.5
+              </div>
+
+
+              <span class="card-tag">
+                GL Tailandesa
+              </span>
+
+
+            </div>
+
+
+          </div>
+
+
+
+
+          <!-- THE FIRE -->
+
+
+          <div class="card four-elements">
+
+
+            <img
+              src="imagenes/the fire.webp"
+              alt="The Fire">
+
+
+            <div class="card-info">
+
+
+              <div class="card-title">
+                The Fire
+              </div>
+
+
+              <span class="card-tag">
+                4 Elements
+              </span>
+
+
+            </div>
+
+
+          </div>
+
+
+
+
+          <!-- THE WATER -->
+
+
+          <div class="card four-elements">
+
+
+            <img
+              src="imagen/the wather.webp"
+              alt="The Water">
+
+
+            <div class="card-info">
+
+
+              <div class="card-title">
+                The Water
+              </div>
+
+
+              <span class="card-tag">
+                4 Elements
+              </span>
+
+
+            </div>
+
+
+          </div>
+
+
+
+
+          <!-- THE AIR -->
+
+
+          <div class="card four-elements">
+
+
+            <img
+              src="imagenes/the air.webp"
+              alt="The Air">
+
+
+            <div class="card-info">
+
+
+              <div class="card-title">
+                The Air
+              </div>
+
+
+              <span class="card-tag">
+                4 Elements
+              </span>
+
+
+            </div>
+
+
+          </div>
+
+
+
+
+        </section>
+
+
+      </article>
+
+
+    </main>
+
+
+  </div>
+
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+
+  <footer id="contacto">
+
+
+    © 2026 Thai GL Series
+    <br>
+    Numero 663 214 5432
+
+
+  </footer>
+
+
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+
+  <script>
+
+
+    function filterSeries(category, boton) {
+
+
+      const buttons =
+        document.querySelectorAll(".btn");
+
+
+      buttons.forEach(function(button) {
+
+
+        button.classList.remove("active");
+
+
+      });
+
+
+
+
+      boton.classList.add("active");
+
+
+
+
+      const cards =
+        document.querySelectorAll(".card");
+
+
+
+
+      cards.forEach(function(card) {
+
+
+        if (category === "todas") {
+
+
+          card.classList.remove("hide");
+
+
+        }
+
+
+        else if (category === "four-elements") {
+
+
+          if (
+            card.classList.contains("four-elements")
+          ) {
+
+
+            card.classList.remove("hide");
+
+
+          } else {
+
+
+            card.classList.add("hide");
+
+
+          }
+
+
+        }
+
+
+        else if (category === "otras") {
+
+
+          if (
+            card.classList.contains("otras")
+          ) {
+
+
+            card.classList.remove("hide");
+
+
+          } else {
+
+
+            card.classList.add("hide");
+
+
+          }
+
+
+        }
+
+
+      });
+
+
+    }
+
+
+  </script>
+
+
+
+
+</body>
+
+
+</html>
+
+
